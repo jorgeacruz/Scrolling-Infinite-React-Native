@@ -1,1 +1,1 @@
-# scrolling-react-native
+# React Native - Infinite Scroll
