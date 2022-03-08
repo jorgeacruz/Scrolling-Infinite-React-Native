@@ -24,17 +24,29 @@ export default function App() {
   );
 }
 
+
+function Listao({ data }){
+  return(
+    <View style={styles.ListItem}>
+      <Text style={styles.LisTexto}>{data.nome_completo}</Text>
+    </View>
+  )
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logomarca: {
-    flex:2
+  ListItem: {
+    backgroundColor:'#fff',
+    padding:20,
+    borderRadius:10
   },
-  areaLogin:{
-    flex:1
+  LisTexto: {
+    color:'#000',
+    fontSize:18
   }
+
 });

@@ -1,3 +1,8 @@
 # React Native - Infinite Scroll
 
-## Install Axios
+## Library Installed
+- Axios
+
+## Aplication
+# ideal for scrolling products sequence, pictures, list name and whatever u need.
+
