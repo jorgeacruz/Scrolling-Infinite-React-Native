@@ -7,7 +7,7 @@ export default function App() {
   const perPage = 20;
   
   const[data, setData] = useState([
-    {id:1, nome_completo:'Jorge Cruz'}
+    {id:1, full_name:'Jorge Cruz'}
   ]);
 
   return (
@@ -17,7 +17,7 @@ export default function App() {
       contentContainerStyle={{marginHorizontal:20}}
       data={data}
       keyExtractor={ item => String(item.id)}
-      renderItem={ ({item}) => <Listao/>}
+      renderItem={ ({item}) => <Listao data={item}/>}
       />
       
     </View>
@@ -28,7 +28,7 @@ export default function App() {
 function Listao( data ){
   return(
     <View style={styles.listaItem}>
-      <Text style={styles.listText}>{ data.nome_completo}</Text>
+      <Text style={styles.listText}>{ data.full_name }</Text>
     </View>
   )
 }
@@ -37,18 +37,16 @@ function Listao( data ){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff',
   },
  listaItem: {
-   backgroundColor:'#fff',
+   backgroundColor:'#000',
    padding:20,
    marginTop:20,
    borderRadius:10
  },
  listText: {
-   color:'#f60',
-   fontSize:18
+   color:'#000',
+   fontSize:16
  }
 });
